@@ -18,5 +18,9 @@ public class EnemyFollow : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, speed * Time.deltaTime);
         }
+        else if(Vector2.Distance(transform.position, playerTransform.position) < minimumDistanceFromPlayer)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, -speed * Time.deltaTime);
+        }
     }
 }
