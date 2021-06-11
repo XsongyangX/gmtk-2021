@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
     #region 
     private void Update()
     {
-        this.transform.Translate(direction.x * Speed, direction.y * Speed, 0);
+        this.transform.Translate(direction.x * Speed * Time.deltaTime, 
+            direction.y * Speed * Time.deltaTime, 0);
     }
     #endregion
 
