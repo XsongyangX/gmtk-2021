@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 638501629594219783}
   - component: {fileID: 4989908647696411592}
+  - component: {fileID: 3552045340830611947}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Untagged
@@ -127,3 +128,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   minimumDistanceFromPlayer: 1
+--- !u!114 &3552045340830611947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147980305989349184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb14356edb050b4888d6044b0eba860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumAttackDistance: 4
+  cooldownTime: 3

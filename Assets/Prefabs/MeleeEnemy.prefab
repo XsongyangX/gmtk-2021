@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5813915622132884527}
   - component: {fileID: 4222606005134831576}
+  - component: {fileID: 3930905690022796519}
   m_Layer: 0
   m_Name: MeleeEnemy
   m_TagString: Untagged
@@ -44,6 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ad9534a4bbf9c408d2e2869a59c26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  minimumDistanceFromPlayer: 1
+--- !u!114 &3930905690022796519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3468385961582447930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7f034083340fe479f54f1fc4b3cf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimumAttackDistance: 1.5
 --- !u!1 &5955284780746020743
 GameObject:
   m_ObjectHideFlags: 0
