@@ -17,6 +17,16 @@ public class PlayerBullet : MonoBehaviour, PooledObjInterface
         this.transform.Translate(Direction * Speed * Time.deltaTime);
     }
 
+    // Triggers on collision, reduces the enemy health and destroys bullet.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().DecreaseHealth(1);
+            Discard();
+        }
+    }
+
     /// <summary>
     /// What to do on discard
     /// </summary>
