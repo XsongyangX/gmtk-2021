@@ -10,7 +10,7 @@ public class TeleportPlayer : MonoBehaviour
         [SerializeField] Transform teleportTo;
 
         [Tooltip("The filter Tag")]
-        [SerializeField] string tag = "Player";
+        [SerializeField] string playerTag = "Player";
 
         [Tooltip("Trigger Event to Teleport")]
         [SerializeField] TriggerType type;
@@ -23,7 +23,7 @@ public class TeleportPlayer : MonoBehaviour
         }
                 
 
-            if (tag == string.Empty || other.CompareTag(tag))
+            if (tag == string.Empty || other.CompareTag(playerTag))
         {
             other.transform.position = teleportTo.position;
         }
