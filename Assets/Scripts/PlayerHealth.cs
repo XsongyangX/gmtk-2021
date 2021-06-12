@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int Health = 3;
 
-    public void LoseHealth(int damage)
+    public void DecreaseHealth(int damage)
     {
         this.Health -= damage;
         if (this.Health <= 0)
