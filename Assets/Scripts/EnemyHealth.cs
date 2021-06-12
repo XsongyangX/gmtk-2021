@@ -16,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
     }
     void DestroyEnemy()
     {
+        GetComponentInParent<EnemiesController>().CheckChildCount();
         Destroy(gameObject);
     }
 }
