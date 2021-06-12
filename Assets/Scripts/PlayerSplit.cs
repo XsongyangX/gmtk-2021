@@ -7,11 +7,13 @@ public class PlayerSplit : MonoBehaviour
 {
     private PlayerController playerController;
     private PlayerWeaponController splitSprite;
+    private PlayerWeaponController mainSprite;
 
     private void Start()
     {
         this.playerController = GetComponent<PlayerController>();
         this.splitSprite = playerController.SplitPlayerSprite;
+        this.mainSprite = playerController.MainPlayerSprite;
     }
 
     /// <summary>
@@ -26,12 +28,13 @@ public class PlayerSplit : MonoBehaviour
         // spawn at a left-right mirror position
         Vector3 middleScreen = Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 0.5f));
         middleScreen.z = 0;
+        
         Vector3 spawnedPosition = -(
-                    this.transform.position
+                    this.mainSprite.transform.position
                     -
                     middleScreen
                 );
-        spawnedPosition.y = this.transform.position.y;
+        spawnedPosition.y = this.mainSprite.transform.position.y;
         this.splitSprite.transform.position = spawnedPosition;
     }
 

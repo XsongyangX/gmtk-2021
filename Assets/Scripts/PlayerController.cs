@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Where the player is going, (0,0) means stop
     /// </summary>
-    //[SerializeField]
-    Vector2 direction;
+    public Vector2 Direction;
 
     /// <summary>
     /// How fast the place moves per frame (update call)
@@ -44,10 +43,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
-    {
-        // move
-        this.transform.Translate(direction * Speed * Time.deltaTime);
-        
+    {   
         // aim
         this.Aim = Camera.main.ScreenToWorldPoint(
             Mouse.current.position.ReadValue()
@@ -87,12 +83,12 @@ public class PlayerController : MonoBehaviour
         // An input is completed inside the action
         else if (context.performed) 
         {
-            direction = value;
+            Direction = value;
         }
 
         // The action is completed or reached a stopped state
         else if (context.canceled) {
-            direction = value;
+            Direction = value;
         }
 
         // exceptional phase
