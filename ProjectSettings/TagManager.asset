@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerBullet
   - Enemy
+  - InstaDeath
+  - BlackOoze
   layers:
   - Default
   - TransparentFX
