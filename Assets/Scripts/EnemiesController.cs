@@ -13,7 +13,6 @@ public class EnemiesController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("hello there!");
         if (other.CompareTag("Player"))
         {
             AwakeEnemies(true);
