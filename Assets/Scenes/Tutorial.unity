@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &12764266 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1534240222368133696, guid: 70c5d03f5156b9c44be557f95393520b,
+    type: 3}
+  m_PrefabInstance: {fileID: 937701297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &32033688
 GameObject:
   m_ObjectHideFlags: 0
@@ -9697,12 +9703,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70c5d03f5156b9c44be557f95393520b, type: 3}
---- !u!4 &937701298 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1964522652931052594, guid: 70c5d03f5156b9c44be557f95393520b,
-    type: 3}
-  m_PrefabInstance: {fileID: 937701297}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &951218321
 GameObject:
   m_ObjectHideFlags: 0
@@ -9739,7 +9739,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 937701298}
+  m_Follow: {fileID: 12764266}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 8.319169
@@ -9763,7 +9763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951218321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5177717, y: 1.2536172, z: -10}
+  m_LocalPosition: {x: -2.9569502, y: 1.2536172, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1414365601}
@@ -9869,7 +9869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249186855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5177717, y: 1.2536172, z: -10}
+  m_LocalPosition: {x: -2.9569502, y: 1.2536172, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
