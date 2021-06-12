@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4df4b13b0cc3f4883b39ca13c0a35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Direction: {x: 0, y: 0}
   Speed: 3
   Aim: {x: 0, y: 0, z: 0}
   MainPlayerSprite: {fileID: 4433104463623138119}
@@ -136,6 +137,7 @@ GameObject:
   - component: {fileID: 5658443496561417677}
   - component: {fileID: 6381236539672671132}
   - component: {fileID: 4433104463623138119}
+  - component: {fileID: 8788825598102016302}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -220,6 +222,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 6382435973177279033, guid: af249f97094f9314692b37229d5007fc, type: 3}
+--- !u!114 &8788825598102016302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430822606167022125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b9e65c49a2cb046a8d3a71a703aae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9098948833870268009
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +245,7 @@ GameObject:
   - component: {fileID: 7423944545340018826}
   - component: {fileID: 2344924670701419366}
   - component: {fileID: 4097703282680452221}
+  - component: {fileID: 767364542798279287}
   m_Layer: 0
   m_Name: Split Sprite
   m_TagString: Untagged
@@ -315,3 +330,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 6382435973177279033, guid: af249f97094f9314692b37229d5007fc, type: 3}
+--- !u!114 &767364542798279287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9098948833870268009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32339d69166fa164e9a74cbb53243dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
