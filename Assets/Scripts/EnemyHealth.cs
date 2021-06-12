@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] private int hearts = 2;
     // Start is called before the first frame update
-    void Start()
+    public void DecreaseHealth(int damageDealt)
     {
-        
+        hearts--;
+        if(hearts == 0)
+        {
+            DestroyProjectile();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    void DestroyProjectile()
     {
-        
+        Destroy(gameObject);
     }
 }
