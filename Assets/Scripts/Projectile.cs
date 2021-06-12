@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour
     private Transform playerTransform;
     private Vector2 target;
     [SerializeField] private float speed = 1f;
+
+    public static string PoolTag = "Enemy projectiles";
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -17,9 +19,9 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        if(transform.position.x == target.x && transform.position.y == target.y)
+        if (transform.position.x == target.x && transform.position.y == target.y)
         {
-            DestroyProjectile();
+            Discard();
         }
     }
 
@@ -27,12 +29,30 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Projectile hit the player");
-            DestroyProjectile();
+            //Debug.Log("Projectile hit the player");
+            Discard();
         }
     }
-    void DestroyProjectile()
+    /// <summary>
+    /// What to do on discard
+    /// </summary>
+    public void Discard()
     {
-        Destroy(gameObject);
+        MyPooler.ObjectPooler.Instance.ReturnToPool(PoolTag, this.gameObject);
+    }
+
+    /// <summary>
+    /// Only use this if this instance's values change over its lifetime
+    /// Use to reset the values back to initial state
+    /// </summary>
+    public void OnObjectPooled()
+    {
+        StartCoroutine(VanishAfter());
+    }
+
+    IEnumerator VanishAfter()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Discard();
     }
 }
