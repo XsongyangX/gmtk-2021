@@ -291,6 +291,17 @@
                     "action": "Split",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a7d29c5-2e17-405e-837b-bcc8c2922679",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Split",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
