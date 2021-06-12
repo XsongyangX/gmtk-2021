@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(PlayerWeaponController))]
 public class PlayerController : MonoBehaviour
 {
 
@@ -19,11 +18,31 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Speed of the player per frame")]
     public float Speed = 3f;
 
+    /// <summary>
+    /// Where the cursor is in world coords
+    /// </summary>
     public Vector3 Aim;
-    private PlayerWeaponController playerWeaponController;
+    
+    /// <summary>
+    /// This is to shoot from the main player
+    /// </summary>
+    public PlayerWeaponController MainPlayerSprite;
+    
+    /// <summary>
+    /// This is to shoot from the split image
+    /// </summary>
+    public PlayerWeaponController SplitPlayerSprite;
+
+    private PlayerSplit playerSplit;
 
     // Unity Monobehavior callbacks
     #region 
+
+    private void Start()
+    {
+        this.playerSplit = GetComponent<PlayerSplit>();
+    }
+
     private void Update()
     {
         // move
@@ -45,8 +64,8 @@ public class PlayerController : MonoBehaviour
     {
         if (context.canceled)
         {
-            this.playerWeaponController = GetComponent<PlayerWeaponController>();
-            playerWeaponController.ShootBullet(this.Aim);
+            MainPlayerSprite.ShootBullet(this.Aim);
+            if (SplitPlayerSprite.isActiveAndEnabled) SplitPlayerSprite.ShootBullet(this.Aim);
         }
     }
 
@@ -78,5 +97,19 @@ public class PlayerController : MonoBehaviour
 
         // exceptional phase
         else throw new UnityException("Unexpected context " + context.phase);
+    }
+
+    /// <summary>
+    /// Listener to the split action
+    /// </summary>
+    /// <param name="context"></param>
+    public void OnSplit(InputAction.CallbackContext context)
+    {
+        if (context.canceled) {
+            // split if only one sprite is active
+
+            if (this.SplitPlayerSprite.isActiveAndEnabled) this.playerSplit.OnMerge();
+            else this.playerSplit.OnSplit();
+        }
     }
 }
