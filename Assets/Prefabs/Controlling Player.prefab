@@ -132,6 +132,21 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 973c4153-ff5d-4de7-8cfa-acd097d14049
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6388245112085419930}
+        m_MethodName: OnSplit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 21386a44-1883-4996-afe6-324f8edda376
+    m_ActionName: Player/Split[/Mouse/rightButton,/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -290,12 +305,12 @@ PrefabInstance:
     - target: {fileID: 4651938910905973695, guid: a6dd53a4e1d51314a8355507d463350c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.58
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4651938910905973695, guid: a6dd53a4e1d51314a8355507d463350c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4651938910905973695, guid: a6dd53a4e1d51314a8355507d463350c,
         type: 3}
@@ -310,17 +325,17 @@ PrefabInstance:
     - target: {fileID: 4651938910905973695, guid: a6dd53a4e1d51314a8355507d463350c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4651938910905973695, guid: a6dd53a4e1d51314a8355507d463350c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4651938910905973695, guid: a6dd53a4e1d51314a8355507d463350c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4651938910905973695, guid: a6dd53a4e1d51314a8355507d463350c,
         type: 3}
