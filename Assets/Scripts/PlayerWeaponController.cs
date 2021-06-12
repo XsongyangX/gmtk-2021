@@ -16,7 +16,8 @@ public class PlayerWeaponController : MonoBehaviour
     /// <param name="destination">World position to shoot the bullet</param>
     public void ShootBullet(Vector2 destination)
     {
-        var gameObject = Instantiate(Bullet, this.transform.position, Quaternion.identity);
+        var gameObject = MyPooler.ObjectPooler.Instance.GetFromPool(
+            PlayerBullet.PoolTag, this.transform.position, Quaternion.identity);
         var bullet = gameObject.GetComponent<PlayerBullet>();
         bullet.Direction = (destination - (Vector2)this.transform.position).normalized;
     }
