@@ -6,6 +6,7 @@ public class EnemiesController : MonoBehaviour
 {
     [SerializeField] bool enemiesStartActive = false;
     [SerializeField] GameObject enemiesHolder;
+    [SerializeField] int screen;
     void Start()
     {
         AwakeEnemies(enemiesStartActive);
@@ -22,5 +23,12 @@ public class EnemiesController : MonoBehaviour
     private void AwakeEnemies(bool activateEnemies)
     {
         enemiesHolder.SetActive(activateEnemies);
+    }
+    public void CheckChildCount()
+    {
+        if(enemiesHolder.transform.childCount <= 1)
+        {
+            Debug.Log("Ready to destroy the " + screen + "door");
+        }
     }
 }
