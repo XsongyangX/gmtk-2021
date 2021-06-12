@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerWeaponController))]
 public class PlayerController : MonoBehaviour
 {
 
@@ -16,14 +17,23 @@ public class PlayerController : MonoBehaviour
     /// How fast the place moves per frame (update call)
     /// </summary>
     [Tooltip("Speed of the player per frame")]
-    public float Speed = 0.5f;
+    public float Speed = 3f;
+
+    public Vector3 Aim;
+    private PlayerWeaponController playerWeaponController;
 
     // Unity Monobehavior callbacks
     #region 
     private void Update()
     {
-        this.transform.Translate(direction.x * Speed * Time.deltaTime, 
-            direction.y * Speed * Time.deltaTime, 0);
+        // move
+        this.transform.Translate(direction * Speed * Time.deltaTime);
+        
+        // aim
+        this.Aim = Camera.main.ScreenToWorldPoint(
+            Mouse.current.position.ReadValue()
+        );
+        this.Aim.z = 0;
     }
     #endregion
 
@@ -33,7 +43,11 @@ public class PlayerController : MonoBehaviour
     /// <param name="context">Struct from Unity's Input System</param>
     public void OnFire(InputAction.CallbackContext context)
     {
-        print("Fired");
+        if (context.canceled)
+        {
+            this.playerWeaponController = GetComponent<PlayerWeaponController>();
+            playerWeaponController.ShootBullet(this.Aim);
+        }
     }
 
     /// <summary>
