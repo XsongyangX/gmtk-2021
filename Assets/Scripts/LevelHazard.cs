@@ -10,11 +10,11 @@ public class LevelHazard : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" && this.tag == "BlackOoze")
         {
-            playerHealth.loseHealth(-5f);
+            playerHealth.DecreaseHealth(5);
         }
         else if(collision.gameObject.tag == "Player" && this.tag == "InstaDeath")
         {
-            playerHealth.loseHealth(-100f);
+            playerHealth.DecreaseHealth(100);
         }
         
 
