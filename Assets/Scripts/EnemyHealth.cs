@@ -8,13 +8,13 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     public void DecreaseHealth(int damageDealt)
     {
-        hearts--;
-        if(hearts == 0)
+        hearts -= damageDealt;
+        if (hearts <= 0)
         {
-            DestroyProjectile();
+            DestroyEnemy();
         }
     }
-    void DestroyProjectile()
+    void DestroyEnemy()
     {
         Destroy(gameObject);
     }
