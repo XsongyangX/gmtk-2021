@@ -23,8 +23,16 @@ public class PlayerSplit : MonoBehaviour
         // activate
         this.splitSprite.gameObject.SetActive(true);
 
-        // hurl toward the cursor/aim of the bullets
-        this.splitSprite.transform.position = this.playerController.Aim;
+        // spawn at a left-right mirror position
+        Vector3 middleScreen = Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 0.5f));
+        middleScreen.z = 0;
+        Vector3 spawnedPosition = -(
+                    this.transform.position
+                    -
+                    middleScreen
+                );
+        spawnedPosition.y = this.transform.position.y;
+        this.splitSprite.transform.position = spawnedPosition;
     }
 
     /// <summary>
