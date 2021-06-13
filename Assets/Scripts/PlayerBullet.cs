@@ -9,6 +9,12 @@ public class PlayerBullet : MonoBehaviour, PooledObjInterface
     public float Speed = 10f;
 
     internal Vector2 Direction;
+    
+    /// <summary>
+    /// How much damage per bullet, in units
+    /// </summary>
+    [Tooltip("How much damage per bullet, in units")]
+    public int Damage;
 
     // Update is called once per frame
     void Update()
@@ -22,7 +28,7 @@ public class PlayerBullet : MonoBehaviour, PooledObjInterface
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyHealth>().DecreaseHealth(1);
+            collision.gameObject.GetComponent<EnemyHealth>().DecreaseHealth(this.Damage);
             Discard();
         }
     }
