@@ -28,6 +28,7 @@ public class EnemiesController : MonoBehaviour
     {
         if(enemiesHolder.transform.childCount <= 1)
         {
+            GameObject.FindGameObjectWithTag("DoorHolder").GetComponent<DoorHolder>().OpenDoor(screen);
             Debug.Log("Ready to destroy the " + screen + "door");
         }
     }

@@ -140,6 +140,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1194099700769813920, guid: 70c5d03f5156b9c44be557f95393520b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2858482669357174795, guid: 70c5d03f5156b9c44be557f95393520b,
         type: 3}
       propertyPath: pools.Array.size
@@ -169,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 4876762687911071950, guid: 70c5d03f5156b9c44be557f95393520b,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6940461620173536771, guid: 70c5d03f5156b9c44be557f95393520b,
         type: 3}
