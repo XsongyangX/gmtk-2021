@@ -5,9 +5,15 @@ using UnityEngine;
 public class RangedAttack : EnemyBaseAttack
 {
     [SerializeField] private GameObject projectile;
+    private AudioSource shootSound;
+
+    private void Start()
+    {
+        this.shootSound = GetComponentInChildren<AudioSource>();
+    }
     public override void Attack()
     {
-        Debug.Log("Ranged attack");
+        shootSound.Play();
         Instantiate(projectile, transform.position, Quaternion.identity);
     }
 }
