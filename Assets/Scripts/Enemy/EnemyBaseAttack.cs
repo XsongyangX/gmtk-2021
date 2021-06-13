@@ -10,7 +10,7 @@ public class EnemyBaseAttack : MonoBehaviour
     private Transform playerTransform;
     void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
