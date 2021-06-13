@@ -647,6 +647,7 @@ Tilemap:
     e32: 0
     e33: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &314918514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -717,6 +718,8 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 049f8f06bf214f146820e9986cf2a2f3, type: 3}
 =======
+=======
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
 --- !u!1 &96800514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,13 +1270,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263656453}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 >>>>>>> Add base UI
+=======
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
 --- !u!95 &389539460 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1564191468356099624, guid: 0271de93414d62a45bbe5651fe770c94,
     type: 3}
   m_PrefabInstance: {fileID: 921618296}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &515088844
 PrefabInstance:
@@ -1386,6 +1393,8 @@ Transform:
   m_PrefabInstance: {fileID: 515088844}
   m_PrefabAsset: {fileID: 0}
 =======
+=======
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
 --- !u!1 &519021716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,7 +1532,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692802921}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 >>>>>>> Add base UI
+=======
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
 --- !u!1 &784609480
 GameObject:
   m_ObjectHideFlags: 0
@@ -10840,10 +10852,14 @@ Transform:
   m_GameObject: {fileID: 951218321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -2.9569502, y: 1.2536172, z: -10}
 =======
   m_LocalPosition: {x: -1.3742981, y: 1.2536172, z: -10}
 >>>>>>> Add base UI
+=======
+  m_LocalPosition: {x: -1.3742981, y: 1.2536172, z: -10}
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1414365601}
@@ -11630,10 +11646,14 @@ Transform:
   m_GameObject: {fileID: 1249186855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -2.9569502, y: 1.2536172, z: -10}
 =======
   m_LocalPosition: {x: -1.3742981, y: 1.2536172, z: -10}
 >>>>>>> Add base UI
+=======
+  m_LocalPosition: {x: -1.3742981, y: 1.2536172, z: -10}
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11673,6 +11693,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &1255981022
 PrefabInstance:
@@ -11844,6 +11865,8 @@ Transform:
   m_PrefabInstance: {fileID: 1343928130}
   m_PrefabAsset: {fileID: 0}
 =======
+=======
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
 --- !u!1 &1269687323
 GameObject:
   m_ObjectHideFlags: 0
@@ -12080,7 +12103,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 >>>>>>> Add base UI
+=======
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
 --- !u!1 &1414365600
 GameObject:
   m_ObjectHideFlags: 3
@@ -17680,6 +17706,7 @@ Tilemap:
     e32: 0
     e33: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1728866401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17761,6 +17788,8 @@ Transform:
   m_PrefabInstance: {fileID: 1728866401}
   m_PrefabAsset: {fileID: 0}
 =======
+=======
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
 --- !u!1 &1704200017
 GameObject:
   m_ObjectHideFlags: 0
@@ -18017,7 +18046,10 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
 >>>>>>> Add base UI
+=======
+>>>>>>> 4e95747e6e44eee4030fbd4f2232e565f555208e
 --- !u!1 &1747488015
 GameObject:
   m_ObjectHideFlags: 0
