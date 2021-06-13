@@ -9,10 +9,17 @@ public class MeleeAttack : EnemyBaseAttack
     /// </summary>
     [Tooltip("How much damage per bullet, in units")]
     public int Damage;
+    private AudioSource hitSound;
+
+    private void Start()
+    {
+        this.hitSound = GetComponent<AudioSource>();
+    }
 
     public override void Attack()
     {
-        Debug.Log("Melee attack");
+        this.hitSound.Play();
+
         GameObject.FindGameObjectWithTag("Player").GetComponentInParent<PlayerHealth>()
             .DecreaseHealth(this.Damage);
     }

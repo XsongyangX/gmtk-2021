@@ -9743,11 +9743,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1194099700769813920, guid: 70c5d03f5156b9c44be557f95393520b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 1964522652931052594, guid: 70c5d03f5156b9c44be557f95393520b,
         type: 3}
       propertyPath: m_LocalPosition.x
