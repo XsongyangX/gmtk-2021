@@ -10,6 +10,7 @@ public class NextSlide : MonoBehaviour
     public Text currText;
     public Button nextButton;
     public GameObject treasureChest;
+    public GameObject winScreen;
     int countUp = 0;
 
     private void Update() {
@@ -19,6 +20,7 @@ public class NextSlide : MonoBehaviour
             this.transform.parent.gameObject.SetActive(false);
             Time.timeScale = 1;
             Destroy(treasureChest);
+            Win();
             return;
         }
 
@@ -34,5 +36,10 @@ public class NextSlide : MonoBehaviour
         {
             countUp++;
         }
+    }
+
+    void Win()
+    {
+        winScreen.SetActive(true);
     }
 }
