@@ -8,13 +8,13 @@ public class LevelHazard : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" && this.tag == "BlackOoze")
+        if(collision.gameObject.name == "Player" && this.tag == "BlackOoze")
         {
-            playerHealth.DecreaseHealth(5);
+            playerHealth.DecreaseHealth(1);
         }
-        else if(collision.gameObject.tag == "Player" && this.tag == "InstaDeath")
+        else if(collision.gameObject.name == "Player" && this.tag == "InstaDeath")
         {
-            playerHealth.DecreaseHealth(100);
+            playerHealth.DecreaseHealth(2);
         }
         
 
