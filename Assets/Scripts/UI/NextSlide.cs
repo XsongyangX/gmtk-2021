@@ -7,21 +7,22 @@ using TMPro;
 public class NextSlide : MonoBehaviour
 {
     public string[] texts;
-    public Sprite[] sprites;
-    public Image demo;
     public Text currText;
     public Button nextButton;
+    public GameObject treasureChest;
     int countUp = 0;
 
     private void Update() {
         if(countUp >= texts.Length)
         {
             nextButton.gameObject.SetActive(false);
+            this.transform.parent.gameObject.SetActive(false);
+            Time.timeScale = 1;
+            Destroy(treasureChest);
             return;
         }
 
         currText.text = texts[countUp];
-        demo.sprite = sprites[countUp];
 
     }
     
