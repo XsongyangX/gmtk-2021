@@ -8,7 +8,9 @@ public class DoorHolder : MonoBehaviour
 
     public void OpenDoor(int doorNumber)
     {
-        Debug.Log(doors.Length);
-        doors[doorNumber].SetActive(false);
+        if (doorNumber < doors.Length)
+        {
+            doors[doorNumber].SetActive(false);
+        }
     }
 }

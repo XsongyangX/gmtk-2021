@@ -15,8 +15,6 @@ public class TeleportPlayer : MonoBehaviour
         [Tooltip("Trigger Event to Teleport")]
         [SerializeField] TriggerType type;
 
-    public GameObject playeModel;
-
         void OnTriggerEnter2D(Collider2D other)
         {
             if (type != TriggerType.Enter)
@@ -28,7 +26,6 @@ public class TeleportPlayer : MonoBehaviour
             if (tag == string.Empty || other.CompareTag(playerTag))
         {
             other.transform.position = teleportTo.position;
-            playeModel.transform.position = teleportTo.position;
         }
                 
         }
