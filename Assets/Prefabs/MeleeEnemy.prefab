@@ -64,6 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumAttackDistance: 1.5
   cooldownTime: 2
+  Damage: 1
 --- !u!61 &1847623135203860653
 BoxCollider2D:
   m_ObjectHideFlags: 0

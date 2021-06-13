@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 246563482677147671}
   - component: {fileID: 6909182680622461902}
   - component: {fileID: 2375969364282775575}
+  - component: {fileID: 204773551991056059}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -77,6 +78,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6126e62efcce4ad42b0072433be56f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &204773551991056059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756930420058259267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0875137c5d06ce04b94b0059b8927fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 3
 --- !u!1 &5430822606167022125
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +107,7 @@ GameObject:
   - component: {fileID: 633125854336097259}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,7 +264,7 @@ GameObject:
   - component: {fileID: 4793780909072569641}
   m_Layer: 0
   m_Name: Split Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
