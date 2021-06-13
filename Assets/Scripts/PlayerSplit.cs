@@ -26,16 +26,11 @@ public class PlayerSplit : MonoBehaviour
         this.splitSprite.gameObject.SetActive(true);
 
         // spawn at a left-right mirror position
-        Vector3 middleScreen = Camera.main.ViewportToWorldPoint(new Vector2(0.5f, 0.5f));
-        middleScreen.z = 0;
-        
-        Vector3 spawnedPosition = -(
-                    this.mainSprite.transform.position
-                    -
-                    middleScreen
-                );
-        spawnedPosition.y = this.mainSprite.transform.position.y;
-        this.splitSprite.transform.position = spawnedPosition;
+        var mainSpriteViewport = Camera.main.WorldToViewportPoint(this.mainSprite.transform.position);
+        var splitSpriteViewport = Vector3.one - mainSpriteViewport;
+        splitSpriteViewport.z = mainSpriteViewport.z;
+        splitSpriteViewport.y = mainSpriteViewport.y;
+        this.splitSprite.transform.position = Camera.main.ViewportToWorldPoint(splitSpriteViewport);
     }
 
     /// <summary>
