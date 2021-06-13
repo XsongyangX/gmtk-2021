@@ -8,7 +8,7 @@ public class EnemyBaseAttack : MonoBehaviour
     [SerializeField] private float cooldownTime = 2f;
     float timeUntilNextAttack; 
     private Transform playerTransform;
-    void Start()
+    void Awake()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
