@@ -9,6 +9,13 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float speed = 1f;
 
     public static string PoolTag = "Enemy projectiles";
+
+    /// <summary>
+    /// How much damage a projectile deals to the player
+    /// </summary>
+    [Tooltip("How much damage per bullet, in units")]
+    public int Damage;
+
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -29,7 +36,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //Debug.Log("Projectile hit the player");
+            collision.GetComponentInParent<PlayerHealth>().DecreaseHealth(this.Damage);
             Discard();
         }
     }
@@ -47,12 +54,12 @@ public class Projectile : MonoBehaviour
     /// </summary>
     public void OnObjectPooled()
     {
-        StartCoroutine(VanishAfter());
+        //StartCoroutine(VanishAfter());
     }
 
-    IEnumerator VanishAfter()
-    {
-        yield return new WaitForSeconds(1.5f);
-        Discard();
-    }
+    // IEnumerator VanishAfter()
+    // {
+    //     yield return new WaitForSeconds(1.5f);
+    //     Discard();
+    // }
 }
