@@ -7,12 +7,10 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField] float speed = 3f;
     [SerializeField] float minimumDistanceFromPlayer = 1f;
     private Transform playerTransform;
-    private Transform spriteTransform;
     private float previousPositionX;
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        spriteTransform = gameObject.GetComponentInChildren<Transform>();
 
     }
 
