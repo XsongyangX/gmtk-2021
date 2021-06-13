@@ -542,21 +542,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 138733431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74eda18bbe88d374887d5e20ecd8211f, type: 3}
+  m_Script: {fileID: 11500000, guid: 09101c777cea78b47ad6fd21960d67b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   texts:
-  - Use the left and right arrows on the keyboard to move.
-  - Left mouse click to fire projectiles.
-  - Right mouse click to split image and kill more baddies at once.
-  - Watch out for hazard tiles as they will do damage to you.
+  - Use the left and right arrow keys to move around.
+  - Use the left mouse button to fire.
+  - Split image of yourself with the right mouse button to kill more baddies.
+  - Watch out for hazards as they can hurt you.
   sprites:
   - {fileID: 21300000, guid: fc2d5462f8a6dce4b8ceef26843e7ceb, type: 3}
   - {fileID: 21300000, guid: 7b1beee7a0623fb44a24ef1c98f59041, type: 3}
   - {fileID: 21300000, guid: 82cc1040b6b9ad44cb571aa304fe3585, type: 3}
   - {fileID: 21300000, guid: 25e3bdd73f082984fb7452f064bcc7d5, type: 3}
-  demo: {fileID: 1378444690}
   currText: {fileID: 763804502}
+  img: {fileID: 1378444690}
   nextButton: {fileID: 537222001}
 --- !u!1001 &314918514
 PrefabInstance:
